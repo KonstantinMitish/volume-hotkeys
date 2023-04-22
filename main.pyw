@@ -26,7 +26,7 @@ if __name__ == "__main__":
     listener = Listener(on_press=on_press)
     listener.start()
     while True:
-        if len(queue):
+        while len(queue):
             val = queue.pop()
             sessions = AudioUtilities.GetAllSessions()
             for session in sessions:
